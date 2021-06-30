@@ -7,6 +7,12 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Observações importantes
+
+- Nome do banco de dados: db_desafio_supera
+- Tabelas criadas com migrate, com a configuração pronta para executar: php artisan migrate
+- Seeders configurados para inserção de dados preliminares através do comando: php artisan db:seed
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
