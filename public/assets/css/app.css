@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(235, 140, 55);
+}
+p{
+    margin: 8px;
+    text-align: justify;
+    margin-right: 20px;
+}
+header{
+    text-align: center;
+    line-height: 50px;
+    background-color: rgb(235, 140, 55);
+}
+header h1{
+    font-weight: 500;
+}
+table{
+    width: 60%;    
+    margin: auto;
+    margin-top: 10px;
+    border-collapse: collapse;
+    text-align: left;
+}
+th, td{
+    border-bottom: 1px solid rgb(185, 185, 185);
+    padding: 8px;
+}
+thead{
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+.action{
+    text-align: center;
+}
+button, input[type='submit'], input[type='button']{
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+    cursor: pointer;
+}
+.in{
+    background-color: rgb(55, 190, 55);
+    color: white;
+}
+.view{
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+.edit{
+    background-color: rgb(60, 100, 235);
+    color: white;
+}
+.del{
+    background-color: rgb(225, 73, 73);
+    color: white;
+}
+input[type='text'], input[type='number'], input[type='email'], input[type='password']{
+    width: 50%;
+    line-height: 35px;
+}
+select{
+    height: 35px;
+}
+nav{
+    padding-left: 25%;
+}
+.sidebar{
+    position: fixed;
+    background: rgb(236, 160, 90);
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    transition: all .4s ease;
+}
+.sidebar header{
+    font-size: 22px;
+    padding-left: auto;
+    background-color: rgb(235, 140, 55);
+    line-height: 70px;
+    user-select: none;
+}
+.sidebar li a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: black;
+    padding-left: 40px;
+    border-bottom: 1px solid #858585;
+    box-sizing: border-box;
+    transition: .4s;
+}
+.sidebar li a:hover{
+    padding-left: 55px;
+    box-shadow: 0 0 5px rgb(253, 241, 229);
+}
+#check{
+    display: none;
+}
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background-color: rgb(235, 140, 55);
+    border-radius: 5px;
+}
+label #btn{
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    font-size: 35px;
+    color: black;
+    padding: 6px 8px;
+    transition: all .4s ease;
+}
+label #cancel{
+    z-index: 1111;
+    left: -160px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    color: black;
+    padding: 6px 8px;
+    transition: all .4s ease;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 200px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left: 200px;
+    opacity: 100;
+}
+section{
+    background-color: rgb(253, 241, 229);
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh - 58px);
+    padding: 60px 0 0 40px;
+    transition: all .4s;
+}
+#check:checked ~ section{
+    margin-left: 200px;
+    padding: 10px 0 0 10px;
+}
